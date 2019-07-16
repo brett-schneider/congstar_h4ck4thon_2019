@@ -1,0 +1,13 @@
+[Unit]
+Description=wDWH Bestand FTTX Service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/christoph/congstar_hackathon_2019/rest
+ExecStart=/usr/local/bin/node app.js
+Restart=on-failure
+User=christoph
+Environment=PORT=3000
+
+[Install]
+WantedBy=multi-user.target
